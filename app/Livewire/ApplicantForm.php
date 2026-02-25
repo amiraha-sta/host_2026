@@ -245,8 +245,12 @@ class ApplicantForm extends Component implements HasActions, HasSchemas
             'fromName' => 'MSYA',
         ]);
 
-        $programmeName = "Hospitality Operations and Service Training Programme 2026";
+        $programmeName = "Hospitality Operations and Service Training Programme 2025";
         return redirect("https://msya.gov.tt/thank-you/?FirstName={$name}&ProgrammeName=" . urlencode($programmeName));
+
+        // return redirect("https://msya.gov.tt/thank-you/?FirstName={$name}&ProgrammeName=GERIATRIC%20ADOLESCENT%20PARTNERSHIP%20PROGRAMME%202025%20");
+
+        // redirect()->route('application')->with('success', 'Application submitted successfully');
     }
 
     public function render(): View
